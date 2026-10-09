@@ -1,15 +1,19 @@
 
 .navbar-container{
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .navbar{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #F8FAFC;
 }
+
+
 
 
 .nav-logo img{
@@ -56,4 +60,5 @@
 .nav-left a:hover{
     border-bottom: 1px solid #1E293B;
 }
+
 

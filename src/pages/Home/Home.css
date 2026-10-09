@@ -80,7 +80,7 @@
     line-height: 25px;
 }
 
-h1,
+.text-info h1,
 .home-container p {
     color: #fff;
 }
@@ -91,7 +91,7 @@ h1,
 
 
 
-h1 {
+.text-info h1 {
 
     margin-bottom: 15px;
 }
@@ -346,8 +346,7 @@ h1 {
     }
 
  
-   
-    
+
 
 
 
@@ -361,3 +360,6 @@ h1 {
 
     
 }
+
+
+   

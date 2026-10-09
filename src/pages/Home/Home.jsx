@@ -17,7 +17,7 @@ import { MdLocationPin } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 function Home() {
   return (
-<div>
+<div className='home'> 
     <div className="home-container">
         <div className='back-img'>
         <img src={Back} alt="" />

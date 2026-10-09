@@ -5,6 +5,7 @@
     background-color: #243447;
     color: #fff;
     margin-top: 20px;
+   
 
   
 }
@@ -47,3 +48,37 @@
    
 }
 
+
+
+@media (max-width: 900px) {
+    .footer-content {
+    width: 90%;
+    }
+
+   
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .right-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-icons {
+        gap: 15px;
+    }
+
+    .footer-line {
+        display: none;
+    }
+
+    .footer-text {
+        font-size: 18px;
+    }
+}

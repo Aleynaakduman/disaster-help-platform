@@ -8,13 +8,14 @@ function Navbar() {
     <div className="navbar-container">
         <div className='navbar'>
         
-        <div className="nav-left">
+    
+          <div className="nav-left">
             <div className="nav-logo">
             <img src={logo}/>
         </div>
 
-                <Link>Ana Sayfa</Link>
-                <Link>İhtiyaçlar</Link>
+                <Link to="/">Ana Sayfa</Link>
+                <Link to="/needs">İhtiyaçlar</Link>
                 <Link>Harita</Link>
                 <Link>Gönüllü Ol</Link>
                 <Link>Hakkımızda</Link>
@@ -25,7 +26,8 @@ function Navbar() {
                 <button className='login-btn'>Giriş Yap</button>
                 <button className='register-btn'>Kayıt Ol</button>
         </div>
-    </div>
+      </div>
+  
     </div>
   )
 }
