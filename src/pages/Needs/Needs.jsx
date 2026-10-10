@@ -12,6 +12,8 @@ import temizlik from '../../assets/temizlik.jpg'
 import giyim from '../../assets/giyim.jpg'
 import sağlık from '../../assets/sağlık.jpg'
 import diğer from '../../assets/diğer.jpg'
+import harita from '../../assets/harita-2.jpg'
+import { MdEmergency } from "react-icons/md";
 
 
 import './Needs.css'
@@ -64,7 +66,8 @@ function Needs() {
 
                     </div>
 
-                    <div className="needs-cards">
+                    <div className="needs-cards-container">
+                        <div className="needs-cards">
                             <div className="need-card">
                                 <img src={gıda} alt="" />
                                 <div className="need-card-content">
@@ -108,11 +111,44 @@ function Needs() {
                                 </div>
                                  </div>
                     </div>
-            </div>
 
-            <div className="needs-bottom-right">
 
+
+                    </div>
             </div>
+                                <div className="needs-card-left">
+                        <div className="location-need">
+                           <div className="location-need-content">
+                             <h3>Yardım Haritası</h3>
+                            <p>Tüm ihtiyaçları harita üzerinden görün. Bölgelere göre filtreleyin</p>
+                           </div>
+                            <img src={harita} alt="" />
+                            <button>Haritayı Görüntüle</button>
+                        </div>
+
+                        <div className="urgent-needs">
+                            <div className="urgent-needs-top">
+                              <div className="urgent-text">
+                                 <MdEmergency/>
+                                <h4> Acil İhtiyaçlar</h4>
+                              </div>
+                                <span>→</span>
+                               
+                            </div>
+
+                            <div className="urgent-needs-bottom">
+                                 <ul>
+                                    <li>Su ve gıda</li>
+                                     <li>Çadır ve battaniye</li>
+                                      <li>İlaç medikal malzeme</li>
+                                       <li>Kışlık kıyafet</li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+           
         </div>
     </div>
   )

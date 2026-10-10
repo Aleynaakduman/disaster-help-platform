@@ -1,42 +1,42 @@
-.needs-container{
+.needs-container {
     max-width: 1200px;
     margin: 0 auto;
-    
+
 }
 
-.needs-top{
-     background-color: #243447;
-     color: #fff;
-     border: 1px solid #fff;
-     border-radius: 5px;
-     padding: 25px;
-     margin-top: 10px;
-     display: flex;
-     justify-content: space-between;
-   
+.needs-top {
+    background-color: #243447;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.needs-top-text{
-   display: flex;
-   flex-direction: column;
-   gap: 10px;
+.needs-top-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.info-right{
+.info-right {
 
- display: flex;
- align-items: center;
- gap: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
-.info-right-content{
-   display: flex;
-   align-items: center;
-  gap: 10px;
+.info-right-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 
-.needs-icon{
+.needs-icon {
     background-color: #e0dbd727;
     border-radius: 50%;
     padding: 10px;
@@ -45,19 +45,151 @@
     align-items: center;
 }
 
-.right-content-text b{
+.right-content-text b {
     font-size: 30px;
 }
 
 
-.needs-cards{
+.needs-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
-.need-card{
+.need-card {
     border: 1px solid #0000002e;
     border-radius: 5px;
-    margin: 10px;
+    margin-top: 15px;
     padding: 15px;
+    display: flex;
+    min-height: 150px;
+
+
 }
+
+.need-card img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.need-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.needs-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.needs-buttons button {
+    border: 1px solid #0000002a;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #243447;
+
+}
+
+.needs-buttons button:active {
+    background-color: #243447;
+    color: #fff;
+}
+
+.needs-buttons button:hover {
+    background-color: #243447;
+    color: #fff;
+}
+
+.needs-bottom {
+    display: flex;
+    gap: 15px;
+}
+
+.needs-card-left {
+    background-color: #243447;
+
+    width: 600px;
+    margin-top: 15px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.location-need {
+    position: relative;
+
+}
+
+.location-need button {
+    position: absolute;
+    bottom: 15px;
+    left: 30%;
+    transform: translateX(-50%);
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #243447;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.location-need-content {
+    position: absolute;
+    left: 10%;
+    transform: translateY(60%);
+    line-height: 25px;
+}
+
+.location-need img {
+    display: block;
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px auto 0;
+
+}
+
+
+.urgent-needs-top {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    color: #fff;
+}
+
+.urgent-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.urgent-needs-bottom {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.urgent-needs-bottom ul li {
+    list-style: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+
+    padding: 6px 0;
+
+}
+
+.urgent-needs-bottom ul {}
