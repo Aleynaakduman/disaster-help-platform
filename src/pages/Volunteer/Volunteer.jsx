@@ -8,6 +8,18 @@ import gönüllü from '../../assets/gönüllü.png'
 import './Volunteer.css'
 function Volunteer() {
 
+  const sehirler = [
+    "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin",
+    "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa",
+    "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan",
+    "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta",
+    "Mersin", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir",
+    "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla",
+    "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop",
+    "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van",
+    "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak",
+    "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"
+  ];
 
 
 
@@ -79,7 +91,7 @@ function Volunteer() {
 
             <div className="form-group">
               <label htmlFor="">Telefon Numarası</label>
-              <input  required  maxLength={11} type="tell" placeholder='5XX XXX XX XX' />
+              <input required maxLength={11} type="tell" placeholder='5XX XXX XX XX' />
             </div>
 
 
@@ -89,8 +101,13 @@ function Volunteer() {
 
             </div>
             <div className="form-group">
-              <label htmlFor="">Yaşadığınız İl</label>
-              <input type="date" placeholder='İl seçiniz' />
+              <select>
+                <option value="" disabled>İl seçiniz</option>
+
+                {sehirler.map((sehir) => (
+                  <option>{sehir}</option>
+                ))}
+              </select>
 
             </div>
             <div className="form-group">
@@ -99,13 +116,13 @@ function Volunteer() {
             </div>
 
 
-            
+
 
           </form>
-            <div className="form-group-2">
-                 <label htmlFor="">Kendinizden Kısaca Bahsedin</label>
-              <textarea></textarea>
-            </div>
+          <div className="form-group-2">
+            <label htmlFor="">Kendinizden Kısaca Bahsedin</label>
+            <textarea></textarea>
+          </div>
           <button className='form-btn'>Başvuruyu Gönder</button>
         </div>
       </div>

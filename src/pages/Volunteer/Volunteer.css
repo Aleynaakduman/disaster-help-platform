@@ -1,4 +1,4 @@
-.volunteer-container {
+.volunteer-container{
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -22,6 +22,7 @@
     color: #fff;
     left: 5%;
     line-height: 20px
+    
 }
 
 .volunter-top-text h4 {
@@ -193,8 +194,16 @@
     color: #fff;
     cursor: pointer;
     margin-top:10px;
-    padding: 7px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
 
+}
+
+.form-group select {
+     padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #6b728077;
+    margin-top: 22px;
+    outline: none;
 }
