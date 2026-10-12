@@ -17,7 +17,7 @@ function Navbar() {
                 <Link to="/">Ana Sayfa</Link>
                 <Link to="/needs">İhtiyaçlar</Link>
                 <Link>Harita</Link>
-                <Link>Gönüllü Ol</Link>
+                <Link to="/volunteer">Gönüllü Ol</Link>
                 <Link>Hakkımızda</Link>
         </div>
 
