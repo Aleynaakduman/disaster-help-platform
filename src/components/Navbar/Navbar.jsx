@@ -18,7 +18,7 @@ function Navbar() {
                 <Link to="/needs">İhtiyaçlar</Link>
                 <Link>Harita</Link>
                 <Link to="/volunteer">Gönüllü Ol</Link>
-                <Link>Hakkımızda</Link>
+                <Link to="/about" >Hakkımızda</Link>
         </div>
 
         <div className="nav-right">

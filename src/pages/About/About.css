@@ -1,0 +1,110 @@
+
+
+.about-top{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    line-height: 33px;
+}
+
+
+.about-text{
+    font-size: 20px;
+    color: #718096;
+}
+
+
+.about-top h2{
+    color: #172f73;
+}
+
+.line{
+    background-color:  #71809630;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.about-bottom{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-cards{
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.about-card{
+display: flex;
+flex-direction: column;
+flex: 1;
+gap: 8px;
+margin-top: 15px;
+
+
+    
+}
+
+.about-container p{
+    color: #718096;
+}
+
+.about-icon-1, .about-icon-2, .about-icon-3, .about-icon-4 {
+    width: 50px;      
+    height: 50px;    
+    border-radius: 50%; 
+    font-size: 24px;  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-shrink: 0;   
+    padding: 0;       
+}
+.about-icon-1{
+    background-color: #e1effc;
+    color: #0F2C59;
+}
+
+.about-icon-2{
+    background-color: #def6e5;
+    color: #14532D;
+}
+
+.about-icon-3{
+
+    background-color: #FFF0F3;
+    color: #800020;
+}
+
+.about-icon-4{
+    background-color: #F3E8FF;
+    color: #581C87;
+}
+
+.about-bottom-text{
+    line-height: 25px;
+}
+
+
+.mision-cards{
+    background-color:#e8f1fa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+    display: flex;
+    align-items: stretch;
+}
+
+.mision-card{
+    line-height: 25px;
+   
+}
+
+.line-2{
+    width: 1px;
+    background-color: #8a99b171;
+    margin: 0 auto;
+   
+}
