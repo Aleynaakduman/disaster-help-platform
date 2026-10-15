@@ -1,84 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap');
 
-.footer-container{
+.footer-container {
     min-height: 110px;
     background-color: #243447;
     color: #fff;
     margin-top: 20px;
-   
 
-  
+
+
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    padding-top:45px;
+    padding-top: 45px;
 }
 
-.right-footer{
+.right-footer {
     display: flex;
     gap: 50px;
 }
 
-.footer-icons{
-   display: flex;
-   gap: 15px;
-   font-size: 18px;
-  
+.footer-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+
 }
 
 
-.footer-line{
+.footer-line {
     width: 1px;
     background-color: #ffffffb5;
-  
+
 }
 
-.footer-text{
+.footer-text {
     display: flex;
     align-items: center;
     gap: 10px;
-      font-family: 'Caveat', cursive;
-   font-size: 18px;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
     font-style: italic;
-   
+
 }
 
 
 
 @media (max-width: 900px) {
     .footer-content {
-    width: 90%;
+        width: 90%;
     }
 
-   
+
 }
 
-@media (max-width: 600px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .right-footer {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-icons {
-        gap: 15px;
-    }
-
+@media (max-width: 480px) {
     .footer-line {
         display: none;
     }
+    
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+    }
 
-    .footer-text {
-        font-size: 18px;
+    .right-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .left-footer{
+       white-space: nowrap;
+       margin-bottom: 10px;
     }
 }

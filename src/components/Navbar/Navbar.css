@@ -62,3 +62,54 @@
 }
 
 
+.menu-icon{
+    font-size: 28px;
+    display: none;
+}
+
+/*Telefon Responsive*/
+
+@media (max-width: 480px) {
+
+  .menu-icon{
+    display: block;
+    margin: 10px 5px 0 7px;
+  
+  }
+
+  .nav-left , .nav-right{
+    display: none;
+  }
+
+    .nav-left.active{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .navbar a{
+        border-bottom: 1px solid #00000020;
+    }
+   
+ .nav-right.active {
+       display: flex;
+       flex-direction: row;
+       
+    }
+
+    .register-btn , .login-btn{
+        width: 90%;
+        margin: 10px;
+        padding: 8px;
+    }
+   
+   .nav-logo img{
+    display: none;
+
+   }
+}
