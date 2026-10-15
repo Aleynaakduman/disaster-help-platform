@@ -14,8 +14,6 @@ import sağlık from '../../assets/sağlık.jpg'
 import diğer from '../../assets/diğer.jpg'
 import harita from '../../assets/harita-2.jpg'
 import { MdEmergency } from "react-icons/md";
-
-
 import './Needs.css'
 function Needs() {
   return (

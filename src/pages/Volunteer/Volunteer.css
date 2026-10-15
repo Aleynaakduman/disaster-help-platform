@@ -207,3 +207,34 @@
     margin-top: 22px;
     outline: none;
 }
+
+@media (max-width: 480px) {
+    .volunteer-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    
+
+    .volunteer-bottom{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .volunteer-bottom-right{
+       width: 100%;
+    }
+
+    .form-group input {
+        width: 80%;
+}
+.volunter-top-text {
+
+    width: 70%;
+    bottom: 15%;
+   
+    
+}
+}
