@@ -1,4 +1,145 @@
-.location-container{
+.location-container {
     max-width: 1200px;
     margin: 0 auto;
+
 }
+
+.location-top {
+    display: flex;
+    gap: 5%;
+    align-items: stretch;
+
+}
+
+
+
+.location-filter {
+    border: 1px solid #00000025;
+    border-radius: 5px;
+    width: 20%;
+    background-color: #fff;
+    padding: 10px;
+    height: 400px;
+
+
+}
+
+
+.location-filter ul {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    justify-content: space-around;
+    flex: 1;
+    padding: 0%;
+   
+
+
+}
+
+.location-filter ul li {
+    list-style: none;
+
+}
+
+
+
+.check-input {
+    display: flex;
+    justify-content: space-between;
+  
+ 
+   
+}
+
+
+.filter-line {
+    width: 100%;
+    background-color: rgba(6, 6, 6, 0.141);
+    height: 1px;
+    margin: 10px 0;
+}
+
+.filter-card-end {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(224, 238, 252, 0.467);
+    white-space: nowrap;
+}
+
+.location-filter-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.location-filter-icon .icon {
+    font-size: 20px;
+    color: rgba(1, 1, 204, 0.8);
+}
+
+.water-icon {
+    background-color: #E0F2FE;
+    color: #0284C7;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.food-icon , .middle-icon{
+    color: #EA580C;
+    background-color: #FFEDD5;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.house-icon , .low-icon {
+    color: #16A34A;
+    background-color: #DCFCE7;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.dress-icon {
+    color: #9333EA;
+    background-color: #F3E8FF;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.health-icon {
+    color: #CA8A04;
+    background-color: #FEF9C3;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.high-icon{
+    background-color: rgba(255, 0, 0, 0.403);
+    color: red;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    
+
+}
+
