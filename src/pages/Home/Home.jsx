@@ -132,7 +132,9 @@ function Home() {
             <button>Haritayı görüntüle →</button>
            </div>
 
-            <img src={location}  />
+            <div className="help-location-img">
+                <img src={location}  />
+            </div>
         </div>
 
 
