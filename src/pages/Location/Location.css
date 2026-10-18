@@ -32,7 +32,7 @@
     justify-content: space-around;
     flex: 1;
     padding: 0%;
-   
+
 
 
 }
@@ -47,9 +47,9 @@
 .check-input {
     display: flex;
     justify-content: space-between;
-  
- 
-   
+
+
+
 }
 
 
@@ -89,7 +89,8 @@
     align-items: center;
 }
 
-.food-icon , .middle-icon{
+.food-icon,
+.middle-icon {
     color: #EA580C;
     background-color: #FFEDD5;
     border-radius: 50%;
@@ -98,7 +99,8 @@
     align-items: center;
 }
 
-.house-icon , .low-icon {
+.house-icon,
+.low-icon {
     color: #16A34A;
     background-color: #DCFCE7;
     border-radius: 50%;
@@ -132,14 +134,98 @@
     gap: 5px;
 }
 
-.high-icon{
+.high-icon {
     background-color: rgba(255, 0, 0, 0.403);
     color: red;
     border-radius: 50%;
     padding: 5px;
     display: flex;
     align-items: center;
+
+
+}
+
+.location-bottom {
+    width: 76%;
+    margin-top: 2%;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #00000025;
+    padding: 8px;
+
+}
+
+.location-bottom-text {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+
+.location-bottom-text button{
+   background-color: #0f88c4e5;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   padding: 5px;
+   cursor: pointer;
+}
+
+.location-bottom-cards {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.location-bottom-card {
+    border: 1px solid #0000000f;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+
+}
+
+.location-bottom-icon-1,
+.location-bottom-icon-2,
+.location-bottom-icon-3 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.location-bottom-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mid-btn {
+    color: #EA580C;
+    background-color: #FFEDD5;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    padding: 2px;
+  
+
+
+}
+
+.low-btn {
+    background-color: rgba(255, 0, 0, 0.403);
+    color: red;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    padding: 2px;
     
 
+}
+
+.location-bottom-deg{
+    display: flex;
+    gap: 5px;
+    color: #00000072;
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './Location.css'
-import { FaTriangleExclamation, FaDroplet, FaUtensils, FaHouse, FaShirt, FaBriefcaseMedical , FaLocationDot } from "react-icons/fa6";
+import { FaTriangleExclamation, FaDroplet, FaUtensils, FaHouse, FaShirt, FaBriefcaseMedical, FaLocationDot } from "react-icons/fa6";
 function Location() {
     return (
         <div className='location-container'>
@@ -34,162 +34,227 @@ function Location() {
 
 
                 <div className="location-filter">
-                   
+
                     <div className="filter-card">
-                         <b>Filtrele</b>
-                    <p>İhtiyaç türü</p>
+                        <b>Filtrele</b>
+                        <p>İhtiyaç türü</p>
                         <ul>
-                        <li>
-                            <label>
+                            <li>
+                                <label>
 
-                                <div className="check-input">
-                                    <div className="icon-content">
-                                        <div className="water-icon">
-                                        <FaDroplet />
-                                        
+                                    <div className="check-input">
+                                        <div className="icon-content">
+                                            <div className="water-icon">
+                                                <FaDroplet />
+
+                                            </div>
+                                            Su
+
+                                        </div>
+                                        <input type='checkbox' />
                                     </div>
-                                    Su
+                                </label>
+
+                            </li>
+                            <li>
+                                <label>
+                                    <div className="check-input">
+                                        <div className="icon-content">
+                                            <div className="food-icon">
+                                                <FaUtensils />
+
+                                            </div>
+                                            Gıda
+                                        </div>
+                                        <input type='checkbox' />
+                                    </div>
+                                </label>
+
+                            </li>
+                            <li>
+                                <label>
+                                    <div className="check-input">
+                                        <div className="icon-content">
+                                            <div className="house-icon">
+                                                <FaHouse />
+
+                                            </div>
+                                            Barınma
+                                        </div>
+                                        <input type='checkbox' />
+                                    </div>
+                                </label>
+
+                            </li>
+                            <li>
+                                <label>
+                                    <div className="check-input">
+
+                                        <div className="icon-content">
+                                            <div className="dress-icon">
+                                                <FaShirt />
+
+                                            </div>
+                                            Giyim
+                                        </div>
+                                        <input type='checkbox' />
 
                                     </div>
-                                    <input type='checkbox' />
-                                </div>
-                            </label>
+                                </label>
 
-                        </li>
-                        <li>
-                            <label>
-                                <div className="check-input">
-                                    <div className="icon-content">
-                                        <div className="food-icon">
-                                        <FaUtensils />
-                                       
+                            </li>
+                            <li>
+                                <label>
+                                    <div className="check-input">
+                                        <div className="icon-content">
+                                            <div className="health-icon">
+                                                <FaBriefcaseMedical />
+
+                                            </div>
+                                            Sağlık
+                                        </div>
+                                        <input type='checkbox' />
                                     </div>
-                                     Gıda
-                                    </div>
-                                    <input type='checkbox' />
-                                </div>
-                            </label>
+                                </label>
 
-                        </li>
-                        <li>
-                            <label>
-                                <div className="check-input">
-                                   <div className="icon-content">
-                                     <div className="house-icon">
-                                        <FaHouse />
-                                        
-                                    </div>
-                                    Barınma
-                                   </div>
-                                    <input type='checkbox' />
-                                </div>
-                            </label>
+                            </li>
 
-                        </li>
-                        <li>
-                            <label>
-                                <div className="check-input">
-
-                                <div className="icon-content">
-                                        <div className="dress-icon">
-                                        <FaShirt />
-                                       
-                                    </div>
-                                     Giyim
-                                </div>
-                                    <input type='checkbox' />
-
-                                </div>
-                            </label>
-
-                        </li>
-                        <li>
-                            <label>
-                                <div className="check-input">
-                                    <div className="icon-content">
-                                        <div className="health-icon">
-                                        <FaBriefcaseMedical />
-                                        
-                                    </div>
-                                    Sağlık
-                                    </div>
-                                    <input type='checkbox' />
-                                </div>
-                            </label>
-
-                        </li>
-
-                    </ul>
+                        </ul>
                     </div>
-                        <div className='filter-line'></div>
-                   <div className="emergency-card">
-                     <b>Aciliyet Seviyesi</b>
-                    <ul>
-                        <li>
-                            <label>
-                                <div className="check-input">
-                                   <div className="icon-content">
-                                     <div className="high-icon">
-                                        <FaTriangleExclamation />
-                                        
-                                    </div>
-                                    Yüksek
-                                   </div>
-                                    <input type="checkbox" />
-                                </div>
-                            </label>
-                        </li>
+                    <div className='filter-line'></div>
+                    <div className="emergency-card">
+                        <b>Aciliyet Seviyesi</b>
+                        <ul>
+                            <li>
+                                <label>
+                                    <div className="check-input">
+                                        <div className="icon-content">
+                                            <div className="high-icon">
+                                                <FaTriangleExclamation />
 
-                        <li>
-                            <label>
-                                <div className="check-input">
-                                   <div className="icon-content">
-                                     <div className="middle-icon">
-                                        <FaTriangleExclamation />
-                                        
+                                            </div>
+                                            Yüksek
+                                        </div>
+                                        <input type="checkbox" />
                                     </div>
-                                    Orta
-                                   </div>
-                                    <input type="checkbox" />
-                                </div>
-                            </label>
-                        </li>
+                                </label>
+                            </li>
 
-                        <li>
-                            <label>
-                                <div className="check-input">
-                                    <div className="icon-content">
-                                        <div className="low-icon">
-                                        <FaTriangleExclamation />
-                                        
+                            <li>
+                                <label>
+                                    <div className="check-input">
+                                        <div className="icon-content">
+                                            <div className="middle-icon">
+                                                <FaTriangleExclamation />
+
+                                            </div>
+                                            Orta
+                                        </div>
+                                        <input type="checkbox" />
                                     </div>
-                                    Düşük
+                                </label>
+                            </li>
+
+                            <li>
+                                <label>
+                                    <div className="check-input">
+                                        <div className="icon-content">
+                                            <div className="low-icon">
+                                                <FaTriangleExclamation />
+
+                                            </div>
+                                            Düşük
+                                        </div>
+                                        <input type="checkbox" />
                                     </div>
-                                    <input type="checkbox" />
-                                </div>
-                            </label>
-                        </li>
-                    </ul>
-                   </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
 
 
-                   <div className="filter-card-end">
+                    <div className="filter-card-end">
                         <b>Toplam İhtiyaç Noktası</b>
                         <div className="location-filter-icon">
-                            <FaLocationDot  className='icon'/>
-                             <span>12</span>
-                       
-                        </div>
-                        
+                            <FaLocationDot className='icon' />
+                            <span>12</span>
 
-                   </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
 
 
 
             <div className="location-bottom">
+                <div className="location-bottom-text">
+                    <h3>Son Yardım Talepleri</h3>
+                    <button>Tümünü Gör</button>
+                </div>
+                <div className="location-bottom-cards">
+                    <div className="location-bottom-card">
+                        <div className="location-bottom-icon-1">
+                            <div className="water-icon">
+                                <FaDroplet />
+                            </div>
+                            <div className="location-bottom-content">
+                                <b>Malatya</b>
+                                <p>Su İhtiyacı</p>
+                            </div>
+                        </div>
 
+
+                        <div className="location-bottom-deg">
+                            <button className='low-btn'>Yüksek</button>
+                              <span>→</span>
+                        </div>
+                          
+                    </div>
+                    <div className="location-bottom-card">
+
+                        <div className="location-bottom-icon-2">
+                             <div className="food-icon">
+                                 <FaUtensils />
+                             </div>
+                              </div>
+
+                          
+                            <div className="location-bottom-content">
+                                <b>Adıyaman</b>
+                                <p>Gıda İhtiyacı</p>
+                            </div>
+                        
+
+
+                        <div className="location-bottom-deg">
+                            <button className='mid-btn'>Orta</button>
+                              <span>→</span>
+                          
+                        </div>
+                    </div>
+                    <div className="location-bottom-card">
+                        <div className="location-bottom-content">
+                            <div className="location-bottom-icon-3">
+                                <div className="house-icon">
+                                    <FaHouse />
+                                </div>
+                                <div className="location-bottom-content">
+                                    <b>Hatay</b>
+                                    <p>Barınma İhtiyacı</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="location-bottom-deg">
+                            <button className='mid-btn' >Orta</button>
+                            <span>→</span>
+                        </div>
+                            
+                    </div>
+                </div>
             </div>
 
         </div>
