@@ -1,0 +1,61 @@
+.register-page{
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container{
+  width: 30%;
+  border: 1px solid #0000002e;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.register-form input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #0000002b;
+}
+
+.register-container h2{
+    color: #243447;
+}
+
+.register-page button{
+  width: 100%;
+     background-color: #243447;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
+/*Telefon Responsive*/
+
+@media (max-width: 580px) {
+  .register-container{
+    min-height: auto;
+  }
+
+  .register-container{
+  width: 85%;
+  padding: 15px;
+}
+
+}
+
+/*Tablet Responsive*/
+.register-container{
+  width: 70%;
+}

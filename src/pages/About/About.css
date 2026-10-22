@@ -1,6 +1,4 @@
-
-
-.about-top{
+.about-top {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 20px;
@@ -8,88 +6,92 @@
 }
 
 
-.about-text{
+.about-text {
     font-size: 20px;
     color: #718096;
 }
 
 
-.about-top h2{
+.about-top h2 {
     color: #172f73;
 }
 
-.line{
-    background-color:  #71809630;
+.line {
+    background-color: #71809630;
     width: 100%;
     height: 1px;
     margin: 20px 0;
 }
 
-.about-bottom{
+.about-bottom {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.about-cards{
+.about-cards {
     display: flex;
     align-items: stretch;
     gap: 20px;
 }
 
-.about-card{
-display: flex;
-flex-direction: column;
-flex: 1;
-gap: 8px;
-margin-top: 15px;
+.about-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+    margin-top: 15px;
 
 
-    
+
 }
 
-.about-container p{
+.about-container p {
     color: #718096;
 }
 
-.about-icon-1, .about-icon-2, .about-icon-3, .about-icon-4 {
-    width: 50px;      
-    height: 50px;    
-    border-radius: 50%; 
-    font-size: 24px;  
+.about-icon-1,
+.about-icon-2,
+.about-icon-3,
+.about-icon-4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    flex-shrink: 0;   
-    padding: 0;       
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
 }
-.about-icon-1{
+
+.about-icon-1 {
     background-color: #e1effc;
     color: #0F2C59;
 }
 
-.about-icon-2{
+.about-icon-2 {
     background-color: #def6e5;
     color: #14532D;
 }
 
-.about-icon-3{
+.about-icon-3 {
 
     background-color: #FFF0F3;
     color: #800020;
 }
 
-.about-icon-4{
+.about-icon-4 {
     background-color: #F3E8FF;
     color: #581C87;
 }
 
-.about-bottom-text{
+.about-bottom-text {
     line-height: 25px;
 }
 
 
-.mision-cards{
-    background-color:#e8f1fa;
+.mision-cards {
+    background-color: #e8f1fa;
     border-radius: 5px;
     padding: 15px;
     margin-top: 30px;
@@ -97,14 +99,101 @@ margin-top: 15px;
     align-items: stretch;
 }
 
-.mision-card{
+.mision-card {
     line-height: 25px;
-   
+
 }
 
-.line-2{
+.line-2 {
     width: 1px;
     background-color: #8a99b171;
     margin: 0 auto;
-   
+
+}
+
+
+/*Telefon Responsive*/
+
+@media (max-width: 580px) {
+    .about-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .about-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mision-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 3px;
+    
+    }
+
+    .line-2{
+        width: 100%;
+        height: 1px;
+    }
+  
+}
+
+
+/*Tablet Responsive*/
+@media (min-width: 581px) and (max-width: 1024px){
+     .about-container {
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+
+      .about-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .line-2{
+        margin: 20px;
+    }
+    .mision-card{
+       line-height: 28px;
+    }
+}
+
+
+@media (min-width:1025px){
+    
+/* Masaüstü ve küçük laptop */
+@media (min-width: 1025px) {
+    .about-top,
+    .about-bottom {
+        width: 94%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-cards {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .about-card {
+        min-width: 0;
+    }
+
+    .mision-cards {
+        gap: 24px;
+        padding: 20px;
+    }
+
+    .mision-card {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+
 }

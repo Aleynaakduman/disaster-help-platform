@@ -35,8 +35,13 @@ function Navbar() {
                 <div className="right-nav-icon">
                   <CiSearch />
                 </div>
-                <button className='login-btn'>Giriş Yap</button>
-                <button className='register-btn'>Kayıt Ol</button>
+<Link to="/login" className="login-btn">
+  Giriş Yap
+</Link>
+
+<Link to="/register" className="register-btn">
+  Kayıt Ol
+</Link>
         </div>
       </div>
   

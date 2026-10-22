@@ -41,6 +41,7 @@ width: 100%;
   border-radius: 5px;
   padding: 4px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .register-btn {
@@ -49,6 +50,7 @@ width: 100%;
   border-radius: 5px;
   padding: 4px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-left a {
@@ -113,3 +115,4 @@ width: 100%;
 
    }
 }
+

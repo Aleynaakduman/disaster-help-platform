@@ -1,4 +1,4 @@
-.volunteer-container{
+.volunteer-container {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -22,7 +22,6 @@
     color: #fff;
     left: 5%;
     line-height: 20px
-    
 }
 
 .volunter-top-text h4 {
@@ -40,7 +39,7 @@
     gap: 30px;
     align-items: stretch;
     margin-top: 20px;
-  
+
 }
 
 .volunteer-bottom-left h4 {
@@ -49,7 +48,7 @@
     margin: 20px 0;
 }
 
-.volunteer-bottom-left  {
+.volunteer-bottom-left {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -127,7 +126,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    
+
 }
 
 .p-icon {
@@ -153,18 +152,22 @@
 .volunteer-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+   
 
 }
 
-.volunteer-bottom-right h2{
+.volunteer-bottom-right h2 {
     color: #12428a;
 }
 
-.volunteer-bottom-right p{
-    color: #6B7280 ;
+.volunteer-bottom-right p {
+    color: #6B7280;
     margin: 10px 0;
 }
+
 .form-group input {
     padding: 7px;
     border-radius: 5px;
@@ -185,15 +188,16 @@
     margin-top: 5px;
 }
 
-.form-group-2{
+.form-group-2 {
     margin-top: 10px;
 }
+
 .form-btn {
     width: 100%;
     background-color: #243447;
     color: #fff;
     cursor: pointer;
-    margin-top:10px;
+    margin-top: 10px;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -201,40 +205,82 @@
 }
 
 .form-group select {
-     padding: 7px;
+    padding: 7px;
     border-radius: 5px;
     border: 1px solid #6b728077;
-    margin-top: 22px;
+    margin-top: 5px;
     outline: none;
 }
 
-@media (max-width: 480px) {
-    .volunteer-container{
+
+/*Telefon Responsive*/
+@media (max-width: 580px) {
+    .volunteer-container {
         display: flex;
         flex-direction: column;
         width: 90%;
+
     }
 
-    
 
-    .volunteer-bottom{
+
+    .volunteer-bottom {
         display: flex;
         flex-direction: column;
-        
+
     }
 
-    .volunteer-bottom-right{
-       width: 100%;
+    .volunteer-bottom-right {
+        width: 100%;
     }
 
-    .form-group input {
-        width: 80%;
-}
-.volunter-top-text {
+    .volunter-top-text {
 
-    width: 70%;
-    bottom: 15%;
-   
-    
+        width: 70%;
+        bottom: 15%;
+
+
+    }
+
+    .volunteer-form {
+        width: 100%;
+        gap: 0;
+
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .volunteer-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        height: auto;
+        margin: 20px 0;
+    }
+
 }
+
+
+
+/*Tablet Responsive*/
+@media (min-width:581px) and (max-width:1024px) {
+
+    .volunteer-bottom {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .volunteer-form {
+        height: auto;
+        margin: 20px 0;
+        width: 100%;
+        gap: 15px;
+    }
+
+
+
 }
