@@ -61,8 +61,6 @@ ul a:active {
 
 }
 
-
-
 /*Tablet Responsive*/
 
 @media (min-width:581px) and (max-width:1024px) {
@@ -70,3 +68,5 @@ ul a:active {
         width: 25%;
     }
 }
+
+/*Telefon Responsive*/
