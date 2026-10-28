@@ -25,7 +25,7 @@ function App() {
        <div className="main-content">
          <Routes>
          <Route element={<MainLayout/>}>
-           <Route path='/' element={<Home/>} />
+           <Route path='/home' element={<Home/>} />
           <Route path='/needs' element={<Needs/>} />
           <Route path='/location' element={<Location/>} />
           <Route path='/volunteer' element={<Volunteer/>} />

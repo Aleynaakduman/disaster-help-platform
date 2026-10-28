@@ -193,7 +193,7 @@
 }
 
 
-/*Tablet Responsive*/
+
 /* Tablet Responsive */
 @media (min-width: 581px) and (max-width: 1024px) {
     .fast-process-cards {
@@ -219,4 +219,24 @@
     }
 
 
+}
+
+
+/*Telefon Responsive*/
+@media (max-width:580px){
+    .users-cards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .fast-process-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+
+
+    }
+
+    .welcome-card{
+      padding: 0 5px;
+    }
 }

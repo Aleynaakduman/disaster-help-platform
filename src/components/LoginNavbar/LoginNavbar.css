@@ -33,3 +33,16 @@
 .login-nav-icon{
     font-size: 20px;
 }
+
+.sidebar-hamburger{
+    display: none;
+}
+
+/*Telefon Responsive*/
+@media (max-width:580px){
+    .sidebar-hamburger{
+        display: block;
+    }
+
+
+}

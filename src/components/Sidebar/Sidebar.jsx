@@ -1,20 +1,41 @@
-import React from 'react'
+
 import './Sidebar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate , NavLink} from 'react-router-dom'
 import { FaHouse, FaHandHoldingHeart, FaRegUser, FaMapLocationDot } from "react-icons/fa6";
 import { LiaUsersSolid } from "react-icons/lia";
 import { IoIosFiling } from "react-icons/io";
 import { LuBaggageClaim } from "react-icons/lu";
+import { IoClose } from "react-icons/io5";
+import { supabase } from '../../supabaseClient'
 
 
 
-function Sidebar() {
+
+
+function Sidebar({isOpen , setOpen}) {
+  const navigate = useNavigate()
+  function handleLogout() {
+    supabase.auth.signOut()
+    .then(({error}) => {
+      if (error) {
+        Console.log("Çıkış yapılamadı:" , error.message)
+        return
+      }
+      navigate("./home")
+    })
+  }
+  
+
   return (
-    <div className='sidebar-page'>
+    <div className= {`sidebar-page ${isOpen ? 'open' : ''}`}>
+   
       <div className="sidebar-container">
+        <button onClick={() => setOpen(!isOpen)} className='close-btn'>
+          <IoClose />
+        </button>
         <ul className='sidebar-list'>
-          <Link><div className="list-icon"><FaHouse /></div> Ana Panel</Link>
-          <Link><div className="list-icon"><LuBaggageClaim /></div>Taleplerim</Link>
+          <NavLink to="/loginmain" ><div className="list-icon"><FaHouse /></div> Ana Panel</NavLink>
+          <Link ><div className="list-icon"><LuBaggageClaim /></div>Taleplerim</Link>
           <Link><div className="list-icon"><FaHandHoldingHeart /></div>Yardımlarım</Link>
           <Link><div className="list-icon"><IoIosFiling /></div>Başvurularım</Link>
           <Link><div className="list-icon"><FaMapLocationDot /></div>Harita</Link>
@@ -23,7 +44,9 @@ function Sidebar() {
         </ul>
 
         <div className="out-btn">
-          <button>Çıkış Yap</button>
+          
+          <button onClick={handleLogout} >Çıkış Yap</button>
+       
         </div>
       </div>
 

@@ -20,6 +20,13 @@
     margin: 0;
 }
 
+.sidebar-list a.active{
+       background-color: #435571;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
 ul a {
     text-decoration: none;
     padding: 5px;
@@ -48,7 +55,7 @@ ul a:active {
     padding: 4px;
     border-radius: 5px;
     border: none;
-        background-color: #284a86;
+    background-color: #284a86;
     color: #fff;
 
 }
@@ -61,6 +68,10 @@ ul a:active {
 
 }
 
+.close-btn {
+    display: none;
+}
+
 /*Tablet Responsive*/
 
 @media (min-width:581px) and (max-width:1024px) {
@@ -69,4 +80,39 @@ ul a:active {
     }
 }
 
-/*Telefon Responsive*/
+
+/* Mobil sidebar görünümü */
+@media (max-width:580px) {
+    .sidebar-page {
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        width: 260px;
+        height: 100dvh;
+        z-index: 1000;
+        transform: translateX(-100%);
+         transition: transform 0.3s ease;
+
+
+    }
+
+    .sidebar-page.open {
+        transform: translateX(0);
+    }
+
+    .close-btn {
+        display: block;
+        align-self: flex-end;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+
+
+
+    }
+
+
+
+
+
+}
