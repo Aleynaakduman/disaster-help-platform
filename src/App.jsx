@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route , Navigate} from "react-router-dom";
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home/Home'
@@ -13,6 +13,7 @@ import Login from './pages/Login/Login'
 import LoginMain from './pages/LoginMain/LoginMain';
 import DashboardLayout from './layouts/DasboardLayout';
 import MainLayout from './layouts/MainLayout';
+import Profile from  './pages/Profile/Profile'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -24,6 +25,7 @@ function App() {
       
        <div className="main-content">
          <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
          <Route element={<MainLayout/>}>
            <Route path='/home' element={<Home/>} />
           <Route path='/needs' element={<Needs/>} />
@@ -37,6 +39,7 @@ function App() {
          </Route>
           <Route element={<DashboardLayout/>}>
              <Route path='/loginmain' element= {<LoginMain />} />
+             <Route path='/profile' element= {<Profile />} />
           </Route>
 
           
