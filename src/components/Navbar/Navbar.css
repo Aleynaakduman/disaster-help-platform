@@ -1,9 +1,8 @@
-
-.navbar-container{
-width: 100%;
+.navbar-container {
+    width: 100%;
 }
 
-.navbar{
+.navbar {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -16,55 +15,119 @@ width: 100%;
 
 
 
-.nav-logo img{
-    height: 50px;
+.nav-logo img {
+    height: 60px;
 }
 
-
-
-.nav-left{
+.nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
-.nav-right{
+.nav-logo-content {
+    color: #276090;
+}
+
+.nav-logo-content p {
+    font-size: 13px;
+}
+
+
+
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+   
+}
+
+.nav-list-2{
+    padding-left: 30px;
+}
+.nav-list-2 a {
+    position: relative;
+    text-decoration: none;
+    color: #173B63;
+    font-size: 16.5px;
+    padding: 8px 0;
+}
+
+.nav-list-2 a::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    left: 0%;
+    bottom: 0%;
+    background-color: #245A8D;
+    transition: width 0.3s ease;
+    position: absolute;
+
+}
+
+.nav-list-2 a:hover::after {
+    width: 100%
+}
+
+.nav-left ul a {
+    color: #173B63;
+}
+
+.nav-right {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .login-btn {
-  background-color: #F1F5F9;
-  color: #1E293B;
-  border: 1px solid #E2E8F0;
-  border-radius: 5px;
-  padding: 4px;
-  cursor: pointer;
-  text-decoration: none;
+    background-color: #F4F8FC;
+    color: #245A8D;
+    border: 1px solid #C6DDF5;
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.login-btn:hover {
+    background-color: #E5EFF9;
+    color: #19355C;
 }
 
 .register-btn {
-  background-color: #1E293B;
-  color: #FFFFFF;
-  border-radius: 5px;
-  padding: 4px;
-  cursor: pointer;
-  text-decoration: none;
+    background-color: #19355C;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #19355C;
+    padding: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.register-btn:hover {
+    background-color: #244875;
+    color: #fff;
 }
 
 .nav-left a {
-   text-decoration: none;
-   padding: 10px;
-   color: #000;
+    text-decoration: none;
+    padding: 10px;
+    color: #000;
 }
 
-.nav-left a:hover{
+.nav-left a:hover {
     border-bottom: 1px solid #1E293B;
 }
 
 
-.menu-icon{
+.menu-icon {
     font-size: 28px;
     display: none;
 }
@@ -73,46 +136,49 @@ width: 100%;
 
 @media (max-width: 580px) {
 
-  .menu-icon{
-    display: block;
-    margin: 5px 20px;
-  
-  }
+    .menu-icon {
+        display: block;
+        margin: 5px 20px;
 
-  .nav-left , .nav-right{
-    display: none;
-  }
+    }
 
-    .nav-left.active{
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    .nav-left.active {
         display: flex;
         flex-direction: column;
         align-items: stretch;
     }
 
-    .navbar{
+    .navbar {
         display: flex;
         flex-direction: column;
         align-items: stretch;
     }
-    .navbar a{
+
+    .navbar a {
         border-bottom: 1px solid #00000020;
     }
-   
- .nav-right.active {
-       display: flex;
-       flex-direction: row;
-       
+
+    .nav-right.active {
+        display: flex;
+        flex-direction: row;
+
     }
 
-    .register-btn , .login-btn{
+    .register-btn,
+    .login-btn {
         width: 90%;
         margin: 10px;
         padding: 8px;
+
     }
-   
-   .nav-logo img{
-    display: none;
 
-   }
+    .nav-logo img {
+        display: none;
+
+    }
 }
-

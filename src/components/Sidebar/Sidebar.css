@@ -27,7 +27,7 @@
 }
 
 
-ul a {
+.sidebar-list a {
     text-decoration: none;
     padding: 5px;
     display: flex;
@@ -36,7 +36,7 @@ ul a {
     color: #284a86;
 }
 
-ul a:hover {
+.sidebar-list a:hover {
     background-color: #DBEAFE;
     color: #2563EB;
     border-radius: 5px;

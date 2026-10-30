@@ -2,7 +2,7 @@
 
 .footer-container {
     min-height: 110px;
-    background-color: #243447;
+    background-color: #19355C;
     color: #fff;
     margin-top: 20px;
 
@@ -28,6 +28,7 @@
     display: flex;
     gap: 15px;
     font-size: 18px;
+    cursor: pointer;
 
 }
 

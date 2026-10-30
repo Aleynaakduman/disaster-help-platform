@@ -8,7 +8,7 @@ function Footer() {
     <div className='footer-container'>
            <div className="footer-content">
              <div className="left-footer">
-                <p>© 2026 Afet Yardımlaşma Platformu. Tüm haklar saklıdır.</p>
+                <p>© 2026 Umut Eli | Tüm hakları saklıdır.</p>
                 
            
             </div>

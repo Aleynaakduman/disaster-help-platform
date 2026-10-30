@@ -3,7 +3,6 @@ import { MdMailOutline } from "react-icons/md";
 import { FaUserTie,  FaUser  } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import './Profile.css'
-
 function Profile() {
   return (
     <div>
