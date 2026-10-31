@@ -1,11 +1,11 @@
-import React from 'react'
+import { useState } from 'react';
 import { PiUsersThreeFill } from "react-icons/pi";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { MdOutlineSecurity } from "react-icons/md";
 import { RiErrorWarningFill } from "react-icons/ri";
-
 import gönüllü from '../../assets/gönüllü.png'
 import './Volunteer.css'
+import { supabase } from '../../supabaseClient'
 function Volunteer() {
 
   const sehirler = [
@@ -20,6 +20,98 @@ function Volunteer() {
     "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak",
     "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"
   ];
+
+  const [dogumTarihi, setDogumTarihi] = useState("");
+  const [sehir, setSehir] = useState("");
+  const [destekAlanlari, setDestekAlanlari] = useState([]);
+  const [katilimSekli, setKatilimSekli] = useState("");
+  const [aciklama, setAciklama] = useState("");
+  const [konumIzni, setKonumIzni] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!dogumTarihi) {
+      alert("Lütfen doğum tarihinizi girin!");
+      return;
+    }
+
+    const bugun = new Date();
+    const dogum = new Date(dogumTarihi);
+    const yas = bugun.getFullYear() - dogum.getFullYear();
+
+    if (yas < 18) {
+      alert("Yaşınız 18 den küçük. Başvuru başarısız!");
+    } else {
+      alert("Başvuru başarılı!");
+    }
+
+    if(!sehir){
+      alert("Lütfen destek verebileceğiniz şehri seçiniz!");
+      return;
+    }
+
+    if(!destekAlanlari.length === 0){
+      alert("Lütfen en az bir destek alanı seçin!");
+      return;
+    }
+
+    if(!katilimSekli){
+      alert("Lütfenn Katılım şeklinizi seçin!");
+      return;
+    }
+
+ supabase.auth.getUser().then(({ data, error }) => {
+
+  if (error) {
+    alert("Kullanıcı bilgisi alınamadı!");
+    return;
+  }
+
+  const kullanici = data.user;
+
+  console.log("Kullanıcı ID:", kullanici.id);
+  
+supabase
+  .from("volunteer_applications")
+  .insert([
+    {
+      user_id: kullanici.id,
+      birth_date: dogumTarihi,
+      city: sehir,
+      support_areas: destekAlanlari,
+      participation_type: katilimSekli,
+      bio: aciklama,
+      location_consent: konumIzni
+    }
+  ])
+  .then(({ data, error }) => {
+    if (error) {
+      console.log("Kayıt hatası:", error);
+      alert("Başvuru kaydedilemedi!");
+      return;
+    }
+
+    console.log("Kaydedilen başvuru:", data);
+    alert("Gönüllü başvurunuz başarıyla kaydedildi!");
+  });
+
+});
+
+
+
+  }
+
+
+  const handleDestekChange = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setDestekAlanlari([...destekAlanlari, value]);
+    } else {
+      setDestekAlanlari(destekAlanlari.filter((alan) => alan !== value));
+    }
+  }
+
 
 
 
@@ -77,55 +169,114 @@ function Volunteer() {
           <h2>Gönüllü Ol Başvuru Formu</h2>
           <p>Ekibimiz en kısa süre içinde sizinle iletişime geçecektir. </p>
 
-          <form className='volunteer-form'>
-            <div className="form-group">
-              <label htmlFor="">Ad Soyad</label>
-              <input type="text" placeholder='Adınızı ve Soyadınız' required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="">E-posta Adresi</label>
-              <input required type="email" placeholder='E-posta adresinizi giriniz' />
-            </div>
+          <form className='volunteer-form' onSubmit={handleSubmit} >
 
 
-            <div className="form-group">
-              <label htmlFor="">Telefon Numarası</label>
-              <input required maxLength={11} type="tell" placeholder='5XX XXX XX XX' />
-            </div>
 
 
             <div className="form-group">
               <label htmlFor="">Doğum Tarihi</label>
-              <input type="date" placeholder='GG/AA/YYYY' />
+              <input value={dogumTarihi} onChange={(e) => setDogumTarihi(e.target.value)} type="date" placeholder='GG/AA/YYYY' />
 
             </div>
             <div className="form-group">
-                <label htmlFor="sehir">İl Seçiniz</label>
-              <select>
-                
+              <label htmlFor="sehir">İl Seçiniz</label>
+              <select value={sehir} onChange={(e) => setSehir(e.target.value)}>
+
                 <option value="" disabled>İl seçiniz</option>
 
                 {sehirler.map((sehir) => (
-                  <option>{sehir}</option>
+                  <option key={sehir} value={sehir} >{sehir}</option>
                 ))}
               </select>
 
             </div>
-            <div className="form-group">
-              <label htmlFor="">Mesleğiniz</label>
-              <input type="text" placeholder='örn: Yazılım Mühendisi' />
+            <label htmlFor="">Hangi Alanlarda Destek Olabilirsin?</label>
+            <div className="form-group-destek">
+
+              <label>
+                <input type="checkbox" value="Gıda Yardımı" onChange={handleDestekChange} checked={destekAlanlari.includes("Gıda Yardımı")} />
+                Gıda Yardımı
+              </label>
+
+              <label>
+                <input type="checkbox" value="Giysi Yardımı" onChange={handleDestekChange} checked={destekAlanlari.includes("Giysi Yardımı")} />
+                Giysi Yardımı
+              </label>
+
+              <label>
+                <input type="checkbox" value="Barınma Desteği" onChange={handleDestekChange} checked={destekAlanlari.includes("Barınma Desteği")} />
+                Barınma Desteği
+              </label>
+
+
+              <label>
+                <input type="checkbox" value="Psikososyal destek" onChange={handleDestekChange} checked={destekAlanlari.includes("Psikososyal destek")} />
+                Psikososyal destek
+              </label>
+
+              <label>
+                <input type="checkbox" value="Su Yardımı" onChange={handleDestekChange} checked={destekAlanlari.includes("Su Yardımı")} />
+                Su yardımı
+              </label>
+
+
+              <label>
+                <input type="checkbox" value="Hijyen&Temizlik Desteği" onChange={handleDestekChange} checked={destekAlanlari.includes("Hijyen&Temizlik Desteği")} />
+                Hijyen&Temizlik Desteği
+              </label>
+
+
             </div>
+
+            <div className="form-group">
+              <label htmlFor="">Katılım Şekli</label>
+              <label>
+                <input type="radio" name='katilimSekli' value="Sahada Gönüllülük" checked={katilimSekli === "Sahada Gönüllülük"} onChange={(e) => setKatilimSekli(e.target.value)} />
+                Sahada Gönüllülük
+              </label>
+
+              <label>
+                <input type="radio" name='katilimSekli' value="Uzaktan Gönüllülük" checked={katilimSekli === "Uzaktan Gönüllülük"} onChange={(e) => setKatilimSekli(e.target.value)} />
+                Uzaktan Gönüllülük
+              </label>
+
+              <label>
+                <input type="radio" name='katilimSekli' value="Her ikisi de" checked={katilimSekli === "Her ikisi de"} onChange={(e) => setKatilimSekli(e.target.value)} />
+                Her ikisi de
+              </label>
+            </div>
+
+
+            <div className="form-group-2">
+              <label htmlFor="">Kendinizden Kısaca Bahsedin</label>
+              <textarea value={aciklama} onChange={(e) => setAciklama(e.target.value)} placeholder="Gönüllülük deneyiminizden, becerilerinizden veya sunabileceğiniz destekten bahsedebilirsiniz..."
+                rows="4"></textarea>
+
+            </div>
+            <div className="location-info">
+              <label>Konum Bilgisi</label>
+
+              <p>
+                Size en yakın yardım taleplerini gösterebilmemiz ve
+                gönüllülük sürecinizi kolaylaştırabilmemiz için
+                konum bilginize ihtiyaç duyuyoruz.
+              </p>
+
+              <label className="location-checkbox">
+                <input type="checkbox" checked={konumIzni} onChange={(e) => setKonumIzni(e.target.checked)} />
+                Konum bilgimin yakın çevremdeki yardım taleplerini
+                listelemek amacıyla kullanılmasını kabul ediyorum.
+              </label>
+            </div>
+            <button type='submit' className='form-btn'>Başvuruyu Gönder</button>
+
 
 
 
 
           </form>
-          <div className="form-group-2">
-            <label htmlFor="">Kendinizden Kısaca Bahsedin</label>
-            <textarea></textarea>
-          </div>
-          <button className='form-btn'>Başvuruyu Gönder</button>
+
         </div>
       </div>
 

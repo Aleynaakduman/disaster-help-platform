@@ -42,7 +42,7 @@
     border-radius: 5px;
 }
 
-ul a:active {
+.sidebar-list a:active {
     background-color: #435571;
     color: #fff;
     border-radius: 5px;

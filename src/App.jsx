@@ -30,7 +30,6 @@ function App() {
            <Route path='/home' element={<Home/>} />
           <Route path='/needs' element={<Needs/>} />
           <Route path='/location' element={<Location/>} />
-          <Route path='/volunteer' element={<Volunteer/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element= {<Login />} />
@@ -40,6 +39,7 @@ function App() {
           <Route element={<DashboardLayout/>}>
              <Route path='/loginmain' element= {<LoginMain />} />
              <Route path='/profile' element= {<Profile />} />
+             <Route path='/volunteer' element={<Volunteer/>} />
           </Route>
 
           

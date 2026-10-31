@@ -39,7 +39,7 @@ function Sidebar({isOpen , setOpen}) {
           <Link><div className="list-icon"><FaHandHoldingHeart /></div>Yardımlarım</Link>
           <Link><div className="list-icon"><IoIosFiling /></div>Başvurularım</Link>
           <Link><div className="list-icon"><FaMapLocationDot /></div>Harita</Link>
-          <Link><div className="list-icon"><LiaUsersSolid /></div>Gönüllü Ol</Link>
+          <NavLink to="/volunteer" ><div className="list-icon"><LiaUsersSolid /></div>Gönüllü Ol</NavLink>
           <NavLink to="/profile" ><div className="list-icon"><FaRegUser /></div>Profilim</NavLink>
         </ul>
 
